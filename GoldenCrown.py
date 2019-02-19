@@ -5,12 +5,7 @@ class GoldenCrown:
         self.receiver = receiver
         self.message = message
 
-    @staticmethod
-    def message_prepared(receiver_kingdom, body_of_message):
-        message_object = GoldenCrown(receiver_kingdom, body_of_message)
-        return message_object
-
-    def check_receiver(self, receiver_kingdom, kingdom_list):
+   def check_receiver(self, receiver_kingdom, kingdom_list):
         result = ""
         for kingdom_name in kingdom_list:
             if kingdom_name.lower() == receiver_kingdom.lower():
@@ -47,7 +42,7 @@ print("None")
 while True:
     message_input = input("Input:")
     result = message_input.split(",")
-    g = GoldenCrown.message_prepared(result[0], result[1])
+    g = GoldenCrown(result[0], result[1])
     alliance_kingdom = g.check_message(g.receiver, g.message, kingdom_list, kingdom_emblem)
     if alliance_kingdom:
         if alliance_kingdom not in allies:
@@ -67,23 +62,3 @@ else:
 print("Allies of Ruler?")
 for x in allies:
     print(x, end=" ")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
