@@ -1,4 +1,4 @@
-# Tame-Of-Thrones-by-Geekrust-
+# Tame-Of-Thrones-by-Geektrust-
  
 GoldenCrown is problem 1 in the attached pdf file
 
